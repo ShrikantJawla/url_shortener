@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (method === 'POST') {
       await dbConnect()
-      const id = nanoid(10)
+      const id = nanoid(8)
       const shortUrl = `${process.env.baseUrl}/api/visit/${id}`
       const result = await shortenerModel.create({
         originalUrl: url,
