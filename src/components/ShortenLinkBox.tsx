@@ -73,7 +73,7 @@ export const ShortenLinkBox = (props: Props) => {
           <Input
             type={'url'}
             value={urlInput}
-            onChange={({ target: { value } }) => setUrlInput(value)}
+            onChange={({ target }: any) => setUrlInput(target.value)}
             h={'40px'}
             w={{ base: '93%', md: '450px' }}
             p="5px"
